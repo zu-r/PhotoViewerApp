@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<BorderPane prefHeight="205.0" prefWidth="459.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.NewUser">
+    <bottom>
+        <HBox alignment="CENTER_RIGHT" prefHeight="41.0" prefWidth="258.0" spacing="10.0" BorderPane.alignment="CENTER">
+            <children>
+                <Label fx:id="ErrorText" prefHeight="18.0" prefWidth="158.0" text=" ">
+                    <opaqueInsets>
+                        <Insets />
+                    </opaqueInsets>
+                </Label>
+                <Button fx:id="CancelButton" mnemonicParsing="false" onAction="#cancel" prefHeight="30.0" prefWidth="80.0" text="Cancel" />
+                <Button fx:id="QuitButton" mnemonicParsing="false" onAction="#quitApp" prefHeight="30.0" prefWidth="120.0" text="Quit App" textFill="#252be1" />
+            </children>
+            <BorderPane.margin>
+                <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+            </BorderPane.margin>
+        </HBox>
+    </bottom>
+    <top>
+        <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Create New User" textAlignment="CENTER" wrappingWidth="438.205078125" BorderPane.alignment="CENTER">
+            <BorderPane.margin>
+                <Insets left="10.0" right="10.0" top="10.0" />
+            </BorderPane.margin>
+            <font>
+                <Font size="20.0" />
+            </font>
+        </Text>
+    </top>
+    <left>
+        <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Username:" BorderPane.alignment="CENTER">
+            <BorderPane.margin>
+                <Insets left="10.0" />
+            </BorderPane.margin>
+        </Text>
+    </left>
+    <center>
+        <TextField fx:id="UsernameTextField" onAction="#createNewUser" prefHeight="26.0" prefWidth="222.0" promptText="Enter Username" BorderPane.alignment="CENTER">
+            <BorderPane.margin>
+                <Insets left="10.0" right="10.0" />
+            </BorderPane.margin>
+        </TextField>
+    </center>
+    <right>
+        <Button fx:id="CreateButton" mnemonicParsing="false" onAction="#createNewUser" prefHeight="27.0" prefWidth="108.0" text="Create" BorderPane.alignment="CENTER">
+            <BorderPane.margin>
+                <Insets left="10.0" right="10.0" />
+            </BorderPane.margin>
+        </Button>
+    </right>
+</BorderPane>

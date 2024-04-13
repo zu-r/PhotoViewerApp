@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<BorderPane prefHeight="741.0" prefWidth="1156.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.DisplaySearchRes">
+    <right>
+        <VBox prefHeight="502.0" prefWidth="353.0" spacing="10.0" BorderPane.alignment="CENTER">
+            <children>
+                <TextArea fx:id="CaptionTextArea" prefHeight="165.0" prefWidth="354.0" promptText="Caption Here" />
+                <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Tags:">
+                    <font>
+                        <Font size="19.0" />
+                    </font>
+                </Text>
+                <ListView fx:id="TagsListView" prefHeight="369.0" prefWidth="353.0" />
+            </children>
+        </VBox>
+    </right>
+    <bottom>
+        <VBox prefHeight="113.0" prefWidth="1086.0" spacing="10.0" BorderPane.alignment="CENTER">
+            <children>
+                <HBox prefHeight="94.0" prefWidth="1086.0" spacing="10.0">
+                    <children>
+                        <Text strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="559.7366809844971" />
+                        <Button fx:id="LeftButton" mnemonicParsing="false" onAction="#left" prefHeight="30.0" prefWidth="60.0" text="&lt;-">
+                            <HBox.margin>
+                                <Insets left="100.0" />
+                            </HBox.margin>
+                        </Button>
+                        <Button fx:id="RightButton" mnemonicParsing="false" onAction="#right" prefHeight="30.0" prefWidth="60.0" text="-&gt;" />
+                    </children>
+                </HBox>
+                <HBox prefHeight="100.0" prefWidth="200.0" spacing="10.0">
+                    <children>
+                        <Button fx:id="CreateNewAlbumButton" mnemonicParsing="false" onAction="#createNewAlbum" prefHeight="30.0" prefWidth="196.0" text="Create Album With Search Results" />
+                        <TextField fx:id="NewAlbumNameTextField" prefHeight="30.0" prefWidth="340.0" promptText="Album Name Here" />
+                        <Button fx:id="BackButton" mnemonicParsing="false" onAction="#goBackToMainWindow" prefHeight="30.0" prefWidth="63.0" text="Back">
+                            <HBox.margin>
+                                <Insets left="400.0" />
+                            </HBox.margin>
+                        </Button>
+                        <Button mnemonicParsing="false" prefHeight="30.0" prefWidth="90.0" text="Quit App" onAction="#quitApp" textFill="252be1"/>
+                    </children>
+                </HBox>
+            </children>
+            <padding>
+                <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+            </padding>
+        </VBox>
+    </bottom>
+    <top>
+        <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Search Results" wrappingWidth="1129.205078125" BorderPane.alignment="CENTER">
+            <BorderPane.margin>
+                <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+            </BorderPane.margin>
+            <font>
+                <Font size="21.0" />
+            </font>
+        </Text>
+    </top>
+    <left>
+        <ImageView fx:id="PhotoView" fitHeight="561.0" fitWidth="783.0" pickOnBounds="true" preserveRatio="true" BorderPane.alignment="CENTER">
+            <BorderPane.margin>
+                <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+            </BorderPane.margin>
+        </ImageView>
+    </left>
+</BorderPane>

@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<BorderPane fx:id="root" prefHeight="508.0" prefWidth="550.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.AdminCtrl">
+    <top>
+        <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Admin Subsystem" textAlignment="CENTER" wrappingWidth="300.0" BorderPane.alignment="CENTER">
+            <BorderPane.margin>
+                <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+            </BorderPane.margin>
+            <font>
+                <Font size="24.0" />
+            </font>
+        </Text>
+    </top>
+    <center>
+        <ListView fx:id="UsersListView" minHeight="-Infinity" minWidth="-Infinity" prefHeight="446.0" prefWidth="333.0" BorderPane.alignment="CENTER">
+            <BorderPane.margin>
+                <Insets bottom="10.0" />
+            </BorderPane.margin>
+        </ListView>
+    </center>
+    <bottom>
+        <HBox alignment="CENTER" prefHeight="62.0" prefWidth="550.0" spacing="10.0" BorderPane.alignment="CENTER">
+            <children>
+                <Button fx:id="CreateNewButton" mnemonicParsing="false" onAction="#createUser" prefHeight="30.0" prefWidth="140.0" text="Create User" textFill="GREEN" wrapText="true" />
+                <Button fx:id="DeleteUserButton" mnemonicParsing="false" onAction="#deleteUser" prefHeight="30.0" prefWidth="140.0" text="Delete User" textFill="RED" wrapText="true" />
+                <Button fx:id="LogoutButton" mnemonicParsing="false" onAction="#logout" prefHeight="30.0" prefWidth="140.0" text="Log Out" wrapText="true" />
+                <Button fx:id="QuitAppButton" mnemonicParsing="false" onAction="#quitApp" prefHeight="30.0" prefWidth="140.0" text="Save &amp; Quit" textFill="#252be1" wrapText="true" />
+            </children>
+        </HBox>
+    </bottom>
+</BorderPane>

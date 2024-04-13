@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<BorderPane prefHeight="169.0" prefWidth="331.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.RenameAlbum">
+    <bottom>
+        <HBox alignment="CENTER" prefHeight="36.0" prefWidth="439.0" spacing="10.0" BorderPane.alignment="CENTER">
+            <children>
+                <Button fx:id="CancelButton" mnemonicParsing="false" onAction="#goBackToMainWindow" prefHeight="30.0" prefWidth="110.0" text="Cancel Rename" />
+                <Button fx:id="RenameButton" mnemonicParsing="false" onAction="#rename" prefHeight="30.0" prefWidth="105.0" text="Rename Album" />
+                <Button fx:id="QuitButton" mnemonicParsing="false" onAction="#quitApp" prefHeight="30.0" prefWidth="80.0" text="Quit App" textFill="#252be1" />
+            </children>
+            <BorderPane.margin>
+                <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+            </BorderPane.margin>
+        </HBox>
+    </bottom>
+    <center>
+        <TextField fx:id="AlbumNameTextField" promptText="Enter New Album Name" BorderPane.alignment="CENTER">
+            <BorderPane.margin>
+                <Insets left="10.0" right="10.0" />
+            </BorderPane.margin>
+        </TextField>
+    </center>
+    <top>
+        <VBox alignment="CENTER" prefHeight="58.0" prefWidth="439.0" spacing="10.0" BorderPane.alignment="CENTER">
+            <children>
+                <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Rename Album" textAlignment="CENTER" wrappingWidth="438.205078125">
+                    <font>
+                        <Font size="19.0" />
+                    </font>
+                </Text>
+                <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Enter New Album Name:" textAlignment="CENTER"  />
+            </children>
+            <BorderPane.margin>
+                <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+            </BorderPane.margin>
+        </VBox>
+    </top>
+    <right>
+    </right>
+</BorderPane>

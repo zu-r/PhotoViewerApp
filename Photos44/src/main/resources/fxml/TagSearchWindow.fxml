@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<BorderPane fx:id="root" prefHeight="557.0" prefWidth="790.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.TagSearch">
+    <bottom>
+        <HBox alignment="CENTER" spacing="10.0" BorderPane.alignment="CENTER">
+            <children>
+                <Button fx:id="SearchOrButton1" mnemonicParsing="false" onAction="#searchOneTag" prefHeight="30.0" prefWidth="120.0" text="Search First Tag" />
+                <Button fx:id="SearchAndButton" mnemonicParsing="false" onAction="#searchAndTags" prefHeight="30.0" prefWidth="150.0" text="Search Both Tags" />
+                <Button fx:id="SearchOrButton" mnemonicParsing="false" onAction="#searchOrTags" prefHeight="30.0" prefWidth="150.0" text="Search Either Tag" />
+                <Button fx:id="CancelButton" mnemonicParsing="false" onAction="#goBackToMainWindow" prefHeight="30.0" prefWidth="80.0" text="Cancel" />
+                <Button fx:id="QuitButton" mnemonicParsing="false" onAction="#quitApp" prefHeight="30.0" prefWidth="90.0" text="Quit App" textFill="#252be1" />
+            </children>
+            <BorderPane.margin>
+                <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+            </BorderPane.margin>
+        </HBox>
+    </bottom>
+    <left>
+        <VBox alignment="CENTER" prefHeight="263.0" prefWidth="307.0" spacing="10.0" BorderPane.alignment="CENTER">
+            <BorderPane.margin>
+                <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+            </BorderPane.margin>
+            <children>
+                <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Entered Tags:">
+                    <font>
+                        <Font size="22.0" />
+                    </font>
+                </Text>
+                <ListView fx:id="TagsListView" prefHeight="418.0" prefWidth="347.0" />
+            </children>
+        </VBox>
+    </left>
+    <center>
+        <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0" spacing="10.0" BorderPane.alignment="CENTER">
+            <BorderPane.margin>
+                <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+            </BorderPane.margin>
+            <children>
+                <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Enter up to two tags in format &quot;name, value&quot;:" />
+                <HBox alignment="CENTER" prefHeight="34.0" prefWidth="443.0" spacing="10.0">
+                    <children>
+                        <TextField fx:id="TagsTextField" prefHeight="39.0" prefWidth="381.0" promptText="Enter Tags" />
+                    </children>
+                </HBox>
+            <HBox alignment="CENTER" prefHeight="34.0" prefWidth="443.0" spacing="10.0">
+               <children>
+                      <Button fx:id="AddTagButton" mnemonicParsing="false" onAction="#addTag" prefHeight="30.0" prefWidth="80.0" text="Add Tag" />
+                      <Button fx:id="removeTagButton" mnemonicParsing="false" onAction="#removeTag" prefHeight="30.0" prefWidth="100.0" text="Remove Tag" />
+               </children>
+            </HBox>
+            </children>
+        </VBox>
+    </center>
+    <top>
+        <VBox alignment="CENTER" prefHeight="36.0" prefWidth="587.0" spacing="10.0" BorderPane.alignment="CENTER">
+            <children>
+                <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Search by Tags" textAlignment="CENTER" wrappingWidth="500.0">
+                    <font>
+                        <Font size="32.0" />
+                    </font></Text>
+            </children>
+            <BorderPane.margin>
+                <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+            </BorderPane.margin>
+        </VBox>
+    </top>
+</BorderPane>
